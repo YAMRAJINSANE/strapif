@@ -5,12 +5,14 @@ export interface ProductListingProductListing extends Schema.Component {
   info: {
     displayName: 'Product Listing';
     icon: 'picture';
+    description: '';
   };
   attributes: {
     name: Attribute.String;
     image: Attribute.Media;
     stock: Attribute.String;
     color: Attribute.String;
+    price: Attribute.Integer;
   };
 }
 

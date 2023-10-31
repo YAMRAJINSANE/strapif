@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "featured_posts",
+  "info": {
+    "singularName": "featured-post",
+    "pluralName": "featured-posts",
+    "displayName": "featuredPost ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "featured_posts"
+    }
+  }
+}
